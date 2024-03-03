@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Your CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            display: none; /* Initially hide all sections */
+            padding: 20px;
+        }
+
+        #about {
+            background-color: #f4f4f4;
+        }
+
+        #projects {
+            background-color: #ddd;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+            padding: 10px 0;
+        }
+
+        .project {
+            margin-right: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            min-width: 300px; /* Set minimum width for each project card */
+            transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+        }
+
+        .project:hover {
+            transform: translateY(-5px); /* Move card slightly upwards on hover */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Abdul Raheem Shahzad</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <div style="display: flex; justify-content: center;">
+            <img src="me.png" alt="Abdul Raheem Shahzad" style="height: 800px; width: 1000px;">
+        </div>
+        <div>
+            <p>
+                I am Abdul Raheem Shahzad, a passionate software developer with a diverse skill set. I specialize in languages such as C++, SQL, NASM, C, HTML, CSS, JavaScript, C#, and Python. Over the years, I have gained extensive experience in tackling complex problems and delivering efficient solutions.
+            </p>
+            <p>
+                My journey in software development has been marked by a strong commitment to learning and growth. I continually seek opportunities to expand my knowledge and stay updated with the latest advancements in technology. This drive for excellence fuels my passion for innovation and problem-solving.
+            </p>
+            <p>
+                Beyond technical skills, I possess strong communication and collaboration abilities. I thrive in team environments, where I can contribute my expertise and work towards common goals effectively.
+            </p>
+            <p>
+                As a lifelong learner, I am always eager to take on new challenges and explore emerging technologies. I believe in the power of technology to transform lives and am dedicated to making a positive impact through my work.
+            </p>
+            <p>
+                I completed my education from various reputable institutions, including Fast University, Punjab College, and Faisalabad High School. You can find all my projects for every semester on my GitHub account: <a href="https://github.com/araheem12">Abdul Raheem Shahzad</a>.
+            </p>
+        </div>
+    </section>
+    
+    
+    
+    <section id="projects">
+        <h2 style="text-align: center; font: bold; font-size: medium;">Projects</h2>
+        <br>
+        <div class="project">
+            <h3>Battleship game</h3>
+            <p>Battleship game with pf concepts it has 2 modes p2p and p2m with modes as easy,hard or medium</p>
+            <a href="https://github.com/araheem12/Battleship-in-c-plus-">Battleship</a>
+        </div>
+        <!-- Add more project cards -->
+        <div class="project">
+            <h3>Inventory management system</h3>
+            <p>This was designed for small customer shops so they can keep track of their little work and their daily basis work also it's calculation</p>
+            <a href="https://github.com/araheem12/Inventory-management-system">Inventory management system</a>
+        </div>
+        <!-- Add more project cards -->
+        <div class="project">
+            <h3>Advanced Notepad</h3>
+            <p>It uses 4D pointer also we can use arrow keys in that notepad with functionalities like edit,search,delet,display etc</p>
+            <a href="https://github.com/araheem12/Advanced-notepad-C-">Advanced Notepad</a>
+        </div>
+        <!-- Add more project cards -->
+        <div class="project">
+            <h3>Event management system</h3>
+            <p>It was designed for event managers to book he clients records also the clients were able to login and register event of their choice</p>
+            <a href="https://github.com/araheem12/Event-Management-system-.net-frame-work-">Event management system</a>
+        </div>
+        <!-- Add more project cards -->
+        <div class="project">
+            <h3>Potion Explosion</h3>
+            <p>It was designed as rules of the games with potions assigned the first to fill all potion wins we can pick,return marbles in the game etc</p>
+            <a href="https://github.com/araheem12/Potion-Explosion-c-">Potion Explosion</a>
+        </div>
+        <!-- Add more project cards -->
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me via email at abdulraheem120602@gmail.com or connect with me on github:
+             <a href="https://github.com/araheem12">Abdul Raheem Shahzad</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Abdul Raheem Shahzad</p>
+    </footer>
+
+    <script>
+        // Function to show/hide sections
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
